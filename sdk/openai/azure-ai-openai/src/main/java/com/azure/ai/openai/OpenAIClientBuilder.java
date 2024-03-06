@@ -327,7 +327,7 @@ public final class OpenAIClientBuilder implements HttpTrait<OpenAIClientBuilder>
     private NonAzureOpenAIClientImpl buildInnerNonAzureOpenAIClient() {
         HttpPipeline localPipeline = (pipeline != null) ? pipeline : createHttpPipeline();
         NonAzureOpenAIClientImpl client
-            = new NonAzureOpenAIClientImpl(localPipeline, JacksonAdapter.createDefaultSerializerAdapter(),endpoint);
+            = new NonAzureOpenAIClientImpl(localPipeline, JacksonAdapter.createDefaultSerializerAdapter());
         return client;
     }
 
